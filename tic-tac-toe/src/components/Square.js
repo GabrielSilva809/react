@@ -1,10 +1,14 @@
 import React from 'react';
 
 class Square extends React.Component {
+    constructor(props){
+        super(props);
+    }
+    
     render() {
         return (
             <button 
-                className='square'
+                className={this.props.corSquare}
                 onClick={() => this.props.onClick()}
             >
                 {this.props.value}
